@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="/SEM-2/CSS/webpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+    <img src="logo.png" class="logo" width="80" height="40">
+    <nav>
+        <body>
+            <div id="header">
+                <div class="container">
+                    <nav>
+                        <ul id="sidemenu">
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#AboutMe">AboutMe</a></li>
+                            <li><a href="#Portfolio">Portfolio</a></li>
+                            <li><a href="#ContactMe">ContactMe</a></li>
+                            <i class="fas fa-times" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fas fa-bars" onclick="openmenu()"></i>
+                    </nav>
+                    <div class="header-text">
+                        <h1> 
+                            <span>Hi everyone!</span></h1>
+                    </div>
+                </div>
+            </div>
+            <!-- ----about----- -->
+            <div id="AboutMe">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col1">
+                            </div>
+        
+                            <div class="about-col2"></div>
+                            <h1 class="sub-title">About Me</h1>
+                
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links"onclick="opentab('Family')">Family</p>
+                        <p class="tab-links"onclick="opentab('Hobbies')">Hobbies</p>
+                    </div>
+        
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <Li><span>Secondary Education Examination from Jhapa</span></Li>
+                            <Li><span>Intermediate level, Biology major, from NEB</span></Li>
+                            <Li><span>Currently studying Computer Science at Herald College Kathmandu</span></Li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Family">
+                        <ul>
+                            <Li><span> My mother is a teacher and my father is a businessman.</span></Li>
+                            <Li><span>I have a sibling, his name is Ayush.</span></Li>
+                            
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="Hobbies">
+                            <ul>
+                                <Li><span>Singing is one of my favorite Hobbies.</span></Li>
+                                <Li><span>I also love to read novels.</span></Li>
+                                
+                            </ul>
+                        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio -->
+            <div id="Portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Portfolio</h1>
+                    <div class="Portfolio-list">
+                        <div>
+                            <h2>Work experience</h2>
+                            <p> Volunteered at Blood donation program organized by Red Cross Society.</p>
+                        </div>
+                        <div>
+                            <h2>Projects</h2>
+                            <p>Relief fund for Covid-19 pandemic victims.</p>
+                        </div>
+                        <div>
+                            <h2>Technical skills</h2>
+                            <p>Python, Java, HTML, CSS and JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- --contact -->
+            <div id="ContactMe">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class='sub-title'>Contact Me</h1>
+                            <p>ashchudal5@gmail.com</p>
+                            <p>9817096247</p>
+                            <div class="social-icons">
+                                <a href=""><i class="fa fa-email"></i></a>
+                                        <a href=""><i class="fa fa-instagram"></i></a>
+                                
+                                          </a>
+                                        
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+        
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+        
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+        
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+                
+            </script>
+            <script>
+                var sidemenu =document.getElementById("sidemenu");
+                function openmenu(){
+                    sidemenu.style.right ='0';
+                }
+                function closemenu(){
+                    sidemenu.style.right = "-200px";
+        
+                }
+                
+            </script>
+            <footer>
+                <div>
+                  <p>Copyright &copy; Company Name</p>
+                </div>
+              </footer>
+        </body>
+        </html>
